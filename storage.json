@@ -1,0 +1,9 @@
+{
+    "random_responses": ["asdasd", "qwwqw", "dasdas"],
+    "agent": ["SIRI", "Alexa", "Google"],
+    "responses": {
+        "hello": "Hi there! How can I assist you?",
+        "how are you": "I'm just a program, but I'm doing great!",
+        "bye": "Goodbye! Have a great day!"
+    }
+}
