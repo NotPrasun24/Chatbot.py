@@ -2,20 +2,19 @@ import json
 import random
 import logging
 from colorama import Fore, Style, init
-import time
 
 init()
-
 logging.basicConfig(
-    filename='try.log', 
+    filename='storage.log', 
     filemode='a', 
     level=logging.DEBUG, 
     format='%(asctime)s - %(message)s',
     datefmt="%H:%M:%S",
 )
 
+
 def read_file():
-    with open ('Program2/res.json','r',encoding='utf-8') as storage:
+    with open ('Project-Chatbot/storage.json','r') as storage:
         data = json.load(storage)
         return data
     
@@ -30,7 +29,7 @@ def language_data(choice,data):
     else:
         print("error reading data")
 
-def agent_response(keyword_response,random_response,user_input):
+def agent_response(keyword_response,random_response,user_input,user_name):
     all_keword_responses = []
     for keyword , response in keyword_response.items():
         if keyword in user_input.lower():
@@ -39,6 +38,8 @@ def agent_response(keyword_response,random_response,user_input):
         response = " ".join(all_keword_responses) 
     else:
         response = random.choice(random_response)
+    if random.choice([1,2,3]) == 1:
+        response = f"{response}, {user_name.capitalize()}"
     return response
 def name():
         lines = [
@@ -50,9 +51,10 @@ def name():
 
         for line in lines:
           print(line)
-        #   time.sleep(0.5)      
         while True:
             user_name = input("Hi there! what is your name: ")
+            
+            # user_name = Fore.BLUE + user_name + Style.RESET_ALL     # Color for user's name
             if user_name == "" or user_name == " ":
                 print("You did not enter your name")
             else:
@@ -68,9 +70,12 @@ def name():
                 if 1 <= choice <= 3:
                     return user_name, choice
                 else:
+                    print( Fore.BLUE + "────────────────────────────────────" +  Style.RESET_ALL)
                     print("Invalid number, please choose a valid language")
             except ValueError:
+                print( Fore.BLUE + "────────────────────────────────────" +  Style.RESET_ALL)
                 print("Invalid input, please enter a number")  
+
     
 def main():
     data = read_file()
@@ -83,30 +88,32 @@ def main():
         print(chat_record)
         logging.info(chat_record)
     elif choice == 2:
-        chat_record = f"{agents_name}: Namaste {user_name} Sanchai hunuhuncha? "
+        print( Fore.BLUE + "────────────────────────────────────" +  Style.RESET_ALL)
+        chat_record = f"{agents_name}: Namaste {user_name} Sanchai hunuhuncha?"
         print(chat_record)
         logging.info(chat_record)
     elif choice == 3:
+        print( Fore.BLUE + "────────────────────────────────────" +  Style.RESET_ALL)
         chat_record = f"{agents_name}: Hola {user_name} ¿En qué puedo ayudle? "
         print(chat_record)
         logging.info(chat_record)
     
-    while True:
-        user_input = input(f"{user_name}: ")
+    while True: 
+        print( Fore.BLUE + "────────────────────────────────────" +  Style.RESET_ALL)
+        user_input = input(f"{user_name.capitalize()}: ")
         logging.info(f"{user_name}: {user_input}")
-
         if user_input.lower() in ["exit","bye","end","adios", "salir", "hasta lugeo", "la ma gako"]:
             logging.info(f"{user_name} ended the conversation.")
-            print(f"Goodbye {user_name}! It was nice chatting with you.")
+            print(f"Goodbye {user_name.capitalize()}! It was nice chatting with you.")
             break
-        if random.random() < 0.1:
+        if random.random() < 0.05:
             print("Sorry chat has randomly disconnected because of some technical difficulties.")
             break
-        response = agent_response(keyword_response,random_response,user_input)
+        response = agent_response(keyword_response,random_response,user_input, user_name)
+        
         agent_reply = (f"{agents_name}: {response}")
         print(agent_reply)
         logging.info(agent_reply)
-    
 
 if __name__ == "__main__":
     main()

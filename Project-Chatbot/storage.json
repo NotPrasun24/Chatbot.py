@@ -2,16 +2,16 @@
     "english_language": {
         "agents": ["Ava", "Zane", "Orion", "Noah", "Emily"],
         "random_response": [
-            "Sorry, I didn’t quite get that. Could you rephrase it?", 
-            "I’m not sure I understand. Can you explain a bit more?", 
-            "Oops, that’s beyond my understanding. Could you try again?", 
-            "Hmm, I’m having trouble understanding. Could you say it differently?", 
-            "I didn’t catch that. Let’s try again!", 
-            "I’m sorry, but I don’t know how to respond to that yet.", 
-            "Apologies, I’m not sure what you mean. Could you clarify?", 
-            "That’s new to me! Can you provide more details?", 
-            "I’m learning every day, but I didn’t get that one. Let’s try again!", 
-            "Sorry, I’m not sure what you mean. I’ll do better next time!"
+            "Sorry, I didnt quite get that. Could you rephrase it?", 
+            "Im not sure I understand. Can you explain a bit more?", 
+            "Oops, thats beyond my understanding. Could you try again?", 
+            "Hmm, Im having trouble understanding. Could you say it differently ?", 
+            "I didnt catch that. Lets try again!", 
+            "Im sorry, but I dont know how to respond to that yet.", 
+            "Apologies, Im not sure what you mean. Could you clarify?", 
+            "Thats new to me! Can you provide more details?", 
+            "Im learning every day, but I didnt get that one. Lets try again!", 
+            "Sorry, Im not sure what you mean. Ill do better next time!"
         ],
        
         "keyword_response": {
@@ -44,7 +44,8 @@
         ],
 
         "keyword_response": {
-            "library": "library tesro tallama cha ra bihaana 8 baje dekhi beluka 8 baje samma khula huncha.",
+            "hi": "Hello there, how can i assit you today?",
+            "library": "library chai tesro tallama cha ra bihaana 8 baje dekhi beluka 8 baje samma khula huncha.",
             "cafeteria": "Cafeteria ground floorma cha ra bihaana 9 baje dekhi beluka 7 baje samma khana upalabdha cha.",
             "sports center": "sports_center mukhya gate najikai cha ra bihaana 6 baje dekhi rati 9 baje samma khula huncha.",
             "computer lab": "Computer lab tesro tallama cha ra bihaana 9 baje dekhi beluka 6 baje samma khula huncha.",
