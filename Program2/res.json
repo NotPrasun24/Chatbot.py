@@ -1,0 +1,89 @@
+{
+    "english_language": {
+        "agents": ["Ava", "Zane", "Orion", "Noah", "Emily"],
+        "random_response": [
+            "Sorry, I didn’t quite get that. Could you rephrase it?", 
+            "I’m not sure I understand. Can you explain a bit more?", 
+            "Oops, that’s beyond my understanding. Could you try again?", 
+            "Hmm, I’m having trouble understanding. Could you say it differently?", 
+            "I didn’t catch that. Let’s try again!", 
+            "I’m sorry, but I don’t know how to respond to that yet.", 
+            "Apologies, I’m not sure what you mean. Could you clarify?", 
+            "That’s new to me! Can you provide more details?", 
+            "I’m learning every day, but I didn’t get that one. Let’s try again!", 
+            "Sorry, I’m not sure what you mean. I’ll do better next time!"
+        ],
+       
+        "keyword_response": {
+                "hello": "Hi there! How can I assist you today?",
+                "library": "The library is located on the second floor and is open from 8 AM to 8 PM.",
+                "cafeteria": "The cafeteria is on the ground floor, serving meals from 9 AM to 7 PM.",
+                "sports_center": "The sports center is near the main gate and operates from 6 AM to 9 PM.",
+                "computer_lab": "The computer lab is on the third floor and is open from 9 AM to 6 PM.",
+                "admissions_office": "The admissions office is at the main building's entrance and operates from 9 AM to 4 PM.",
+                "parking_lot": "The parking lot is behind the campus and is open from 6 AM to 10 PM.",
+                "student_lounge": "The student lounge is in the east wing, accessible from 8 AM to 6 PM.",
+                "bookstore": "The bookstore is beside the cafeteria and is open from 9 AM to 5 PM.",
+                "auditorium": "The auditorium is in the west block and is available for events from 10 AM to 7 PM.",
+                "medical_room": "The medical room is on the first floor, open from 8 AM to 5 PM."
+    }
+    },
+    "nepali_language": {
+        "agents": ["Subash", "Prasanna", "Priyanshu", "Rejina", "Pushpa"],
+        "random_response": [
+            "Maaf garnuhos, maile bujhina. Kripaya feri bhannuhos.", 
+            "Malai thikkaai bujhiena. Ke tapai ali farak tarikale bhanna saknuhunchha?", 
+            "Maaf garnuhos, yo kura mero bujhai bahirko ho. Kripaya spashta parnuhos.", 
+            "Hajurle ke bhannubhayeko bhanne bujhna sakina. Feri prayas garnuhos.", 
+            "Yo kura ma bujhna asamarth chu. Arko tarikale bhanna saknuhunchha?", 
+            "Ma ajhai sikdai chu. Kripaya feri prayas garnuhos.", 
+            "Maaf garnuhos, maile tyaslai thik sanga bujhna sakina.", 
+            "Yo ke ho bhanera malai thaaha bhaena. Ke tapai arko tarikale bujhna saknuhunchha?", 
+            "Yo kura bujina. Kripaya feri bhannuhos.", 
+            "Maaf garnuhos, maile bujhina. Ma sudharna prayas gardai chu."
+        ],
+
+        "keyword_response": {
+            "library": "library tesro tallama cha ra bihaana 8 baje dekhi beluka 8 baje samma khula huncha.",
+            "cafeteria": "Cafeteria ground floorma cha ra bihaana 9 baje dekhi beluka 7 baje samma khana upalabdha cha.",
+            "sports center": "sports_center mukhya gate najikai cha ra bihaana 6 baje dekhi rati 9 baje samma khula huncha.",
+            "computer lab": "Computer lab tesro tallama cha ra bihaana 9 baje dekhi beluka 6 baje samma khula huncha.",
+            "admissions_office": "admissions_office mukhya bhawnako praveshdwarma cha ra bihaana 9 baje dekhi dinuso 4 baje samma khula huncha.",
+            "parking": "parking campusko pachaadi cha ra bihaana 6 baje dekhi rati 10 baje samma khula huncha.",
+            "student lounge": "Student lounge purbi pankhama cha, ra bihaana 8 baje dekhi beluka 6 baje samma pahuchyogya cha.",
+            "bookstore": "Bookstore cafeteria ko cheuma cha ra bihaana 9 baje dekhi beluka 5 baje samma khula huncha.",
+            "auditorium": "auditorium pashchim blockma cha ra bihaana 10 baje dekhi beluka 7 baje samma karyakramka lagi upalabdha cha.",
+            "medical room": "medical room kaksh pahilo tallama cha ra bihaana 8 baje dekhi beluka 5 baje samma khula huncha."
+        }   
+    },
+    "spanish_language": {
+        "agents": ["Juan", "Pedro", "Maria", "Pablo", "Diego"],
+        "random_response": [
+            "Lo siento, no entendí. ¿Puedes repetirlo, por favor?", 
+            "No estoy seguro de comprender. ¿Puedes explicarlo de otra manera?", 
+            "Perdón, eso está fuera de mi conocimiento. ¿Puedes aclararlo?", 
+            "Disculpa, no entendí lo que quisiste decir. Intenta de nuevo.", 
+            "No pude captar eso. ¿Puedes intentarlo nuevamente?", 
+            "Lo siento, no sé cómo responder a eso. ¿Podrías ser más específico?", 
+            "Estoy aprendiendo, pero no entendí eso. ¿Puedes darme más detalles?", 
+            "Lo siento, no puedo procesar eso. ¿Podrías explicarlo de otra manera?", 
+            "Hmm, eso es nuevo para mí. Intenta escribirlo de forma diferente.", 
+            "No estoy seguro de entender eso. ¡Intentémoslo otra vez!"
+        ],
+        "keyword_response": {
+            "library": "La biblioteca está ubicada en el segundo piso y está abierta de 8 AM a 8 PM.",
+            "cafeteria": "La cafetería está en la planta baja y sirve comidas de 9 AM a 7 PM.",
+            "sports_center": "El centro deportivo está cerca de la entrada principal y opera de 6 AM a 9 PM.",
+            "computer_lab": "El laboratorio de computación está en el tercer piso y está abierto de 9 AM a 6 PM.",
+            "admissions_office": "La oficina de admisiones está en la entrada del edificio principal y opera de 9 AM a 4 PM.",
+            "parking_lot": "El estacionamiento está detrás del campus y está abierto de 6 AM a 10 PM.",
+            "student_lounge": "La sala de estudiantes está en el ala este, accesible de 8 AM a 6 PM.",
+            "bookstore": "La librería está junto a la cafetería y está abierta de 9 AM a 5 PM.",
+            "auditorium": "El auditorio está en el bloque oeste y está disponible para eventos de 10 AM a 7 PM.",
+            "medical_room": "La sala médica está en el primer piso y está abierta de 8 AM a 5 PM."
+
+        }
+    }
+
+
+}

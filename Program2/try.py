@@ -1,18 +1,21 @@
 import json
 import random
 import logging
+from colorama import Fore, Style, init
+import time
 
+init()
 
 logging.basicConfig(
     filename='try.log', 
     filemode='a', 
     level=logging.DEBUG, 
-    format='%(asctime)s - [Time] - %(message)s',
+    format='%(asctime)s - %(message)s',
     datefmt="%H:%M:%S",
 )
 
 def read_file():
-    with open ('res.json','r',encoding='utf-8') as storage:
+    with open ('Program2/res.json','r',encoding='utf-8') as storage:
         data = json.load(storage)
         return data
     
@@ -38,19 +41,36 @@ def agent_response(keyword_response,random_response,user_input):
         response = random.choice(random_response)
     return response
 def name():
-        print('*'*10 + " Welcome to ChatBot " + '*'*10 + "\n" )
+        lines = [
+            Fore.BLUE + "╭────────────────────────────────────╮",
+            "│     " + Fore.MAGENTA + "   WELCOME TO CHATBOT" + Fore.BLUE + "          │",
+            "│     " + Fore.CYAN + "Your Friendly Assistant" + Fore.BLUE + "        │",
+            "╰────────────────────────────────────╯" + Style.RESET_ALL
+        ]
+
+        for line in lines:
+          print(line)
+        #   time.sleep(0.5)      
         while True:
-            user_name = input("Hi there! What is your name: ")
+            user_name = input("Hi there! what is your name: ")
             if user_name == "" or user_name == " ":
                 print("You did not enter your name")
-                continue
+            else:
+                break
+        while True:
+            print( Fore.BLUE + "────────────────────────────────────" +  Style.RESET_ALL)
             print("Which language would you prefer: ")
             print("1. English")
             print("2. Nepali")
             print("3. Spanish")
-            choice = int(input("Please choose your language:"))
-            return user_name, choice
-        
+            try:
+                choice = int(input("Please choose your language: "))
+                if 1 <= choice <= 3:
+                    return user_name, choice
+                else:
+                    print("Invalid number, please choose a valid language")
+            except ValueError:
+                print("Invalid input, please enter a number")  
     
 def main():
     data = read_file()
@@ -58,11 +78,12 @@ def main():
     agents_name,random_response,keyword_response = language_data(choice,data)
     agents_name = random.choice(agents_name)
     if choice == 1:
-        chat_record = f"{agents_name}: Hello {user_name} How may i assist you "
+        print( Fore.BLUE + "────────────────────────────────────" +  Style.RESET_ALL)
+        chat_record = f"{agents_name}: Hello {user_name} nice to meet you, How may i assist you "
         print(chat_record)
         logging.info(chat_record)
     elif choice == 2:
-        chat_record = f"{agents_name}: Namaste {user_name} Kasto cha? "
+        chat_record = f"{agents_name}: Namaste {user_name} Sanchai hunuhuncha? "
         print(chat_record)
         logging.info(chat_record)
     elif choice == 3:
@@ -78,12 +99,14 @@ def main():
             logging.info(f"{user_name} ended the conversation.")
             print(f"Goodbye {user_name}! It was nice chatting with you.")
             break
+        if random.random() < 0.1:
+            print("Sorry chat has randomly disconnected because of some technical difficulties.")
+            break
         response = agent_response(keyword_response,random_response,user_input)
         agent_reply = (f"{agents_name}: {response}")
         print(agent_reply)
         logging.info(agent_reply)
     
 
-                
 if __name__ == "__main__":
     main()
