@@ -12,7 +12,6 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 
-
 def read_file():
     with open ('Project-Chatbot/storage.json','r') as storage:
         data = json.load(storage)
@@ -52,9 +51,7 @@ def name():
         for line in lines:
           print(line)
         while True:
-            user_name = input("Hi there! what is your name: ")
-            
-            # user_name = Fore.BLUE + user_name + Style.RESET_ALL     # Color for user's name
+            user_name = input("Hi there! what is your name: ")            
             if user_name == "" or user_name == " ":
                 print("You did not enter your name")
             else:

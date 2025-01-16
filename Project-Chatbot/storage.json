@@ -29,7 +29,7 @@
     }
     },
     "nepali_language": {
-        "agents": ["Subash", "Prasanna", "Priyanshu", "Rejina", "Pushpa"],
+        "agents": ["Subash", "Prasanna", "Priyanshu", "Rejina", "Pushpa", "Shubham"],
         "random_response": [
             "Maaf garnuhos, maile bujhina. Kripaya feri bhannuhos.", 
             "Malai thikkaai bujhiena. Ke tapai ali farak tarikale bhanna saknuhunchha?", 
@@ -44,7 +44,6 @@
         ],
 
         "keyword_response": {
-            "hi": "Hello there, how can i assit you today?",
             "library": "library chai tesro tallama cha ra bihaana 8 baje dekhi beluka 8 baje samma khula huncha.",
             "cafeteria": "Cafeteria ground floorma cha ra bihaana 9 baje dekhi beluka 7 baje samma khana upalabdha cha.",
             "sports center": "sports_center mukhya gate najikai cha ra bihaana 6 baje dekhi rati 9 baje samma khula huncha.",
